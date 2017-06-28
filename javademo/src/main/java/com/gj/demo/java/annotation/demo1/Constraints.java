@@ -7,6 +7,8 @@ import java.lang.annotation.Target;
 
 /**
  * Created by guanjian on 17-6-27.
+ *
+ * 修饰数据表字段属性
  */
 
 @Target(ElementType.FIELD)

@@ -7,6 +7,8 @@ import java.lang.annotation.Target;
 
 /**
  * Created by guanjian on 17-6-27.
+ *
+ * 修饰表名
  */
 
 @Target(ElementType.TYPE)

@@ -6,18 +6,16 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by guanjian on 17-6-27.
- *
- * 修饰数据库表字段 STRING类型
+ * Created by guanjian on 17-6-28.
+ * <p>
+ * 表字段属性
  */
 
 @Target(ElementType.FIELD)
-@Retention(RetentionPolicy.RUNTIME)
-public @interface SQLString {
+@Retention(RetentionPolicy.SOURCE)
+public @interface TableColumn {
 
-    int size();
-
-    String name() default "";
+    PropertyType property() default PropertyType.Auto;
 
     Constraints constraints() default @Constraints;
 }
