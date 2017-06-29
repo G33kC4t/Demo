@@ -12,8 +12,10 @@ import java.lang.annotation.Target;
  */
 
 @Target(ElementType.FIELD)
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface TableColumn {
+
+    String name() default "";
 
     PropertyType property() default PropertyType.Auto;
 
