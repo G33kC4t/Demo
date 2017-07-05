@@ -2,6 +2,7 @@ package com.gj.demo;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -14,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
         System.loadLibrary("native-lib");
     }
 
+    /**
+     * TextView
+     */
     @BindView(R.id.sample_text)
     TextView tv;
 
