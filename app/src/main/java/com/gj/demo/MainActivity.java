@@ -1,9 +1,10 @@
 package com.gj.demo;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.CompoundButton;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.gj.demo.annotation.demo1.DemoBean1;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -29,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         // Example of a call to a native method
         ButterKnife.bind(this);
         tv.setText(stringFromJNI());
+
+        DemoBean1 demoBean1 = new DemoBean1();
+        demoBean1.notifyAll();
     }
 
     /**
