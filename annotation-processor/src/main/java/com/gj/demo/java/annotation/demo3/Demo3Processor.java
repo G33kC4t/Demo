@@ -38,8 +38,6 @@ public class Demo3Processor extends AbstractProcessor {
     private Elements elements;
     private Types types;
 
-    private final List<ClassElement> classElements = new ArrayList<>();
-
     @Override
     public synchronized void init(ProcessingEnvironment processingEnvironment) {
         super.init(processingEnvironment);
@@ -90,8 +88,6 @@ public class Demo3Processor extends AbstractProcessor {
             return;
         }
 
-        ClassElement classElement = new ClassElement(element);
-
         while (true) {
             TypeElement typeElement = (TypeElement) element;
             Name name = typeElement.getQualifiedName();
@@ -100,21 +96,9 @@ public class Demo3Processor extends AbstractProcessor {
             if (!nameString.startsWith(PACKAGE)) {
                 break;
             }
-            classElement.append(element, parseElementField(element));
+            // classElement.append(element, parseElementField(element));
             break;
         }
     }
 
-    private List<FieldElement> parseElementField(Element element) {
-        List<FieldElement> fields = new ArrayList<>();
-        List<? extends Element> elements = element.getEnclosedElements();
-        for (Element e : elements) {
-            if (e.getKind() == ElementKind.FIELD) {
-                Set<Modifier> modifiers = e.getModifiers();
-                if (modifiers.contains(Modifier.PROTECTED)) {
-                }
-            }
-        }
-        return fields;
-    }
 }
