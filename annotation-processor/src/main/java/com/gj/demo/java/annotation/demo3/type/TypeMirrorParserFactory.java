@@ -8,7 +8,7 @@ import javax.lang.model.type.TypeMirror;
 
 public class TypeMirrorParserFactory {
 
-    public static <T extends TypeMirror> TypeMirrorParser<T> newInstance(TypeMirror typeMirror) {
+    public static <T extends TypeMirrorParser> T newInstance(TypeMirror typeMirror) {
         return null;
     }
 }
